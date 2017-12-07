@@ -1,0 +1,146 @@
+.container{
+    width: 65%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header a{
+    justify-content: center;
+    text-decoration:none;
+    padding: 3px 17px 3px;
+    text-align:center;
+    transition: color 0.5s;
+    color:#a0a0a0;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    padding: 25px 20px 25px 20px;
+}
+
+header .menu_keeper {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+}
+
+header .menu_keeper_down {
+    border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+header li{
+    height: 100%;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 20px;
+}
+
+
+header a:hover{
+    color: #35424a;
+}
+
+
+.logo div{
+    min-height: 200px;
+    width: 100%;
+
+    background-image: url('../images/siatka_logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.handler{
+
+}
+
+
+/*.product_list{*/
+    /*!*display: flex;*!*/
+    /*!*flex-wrap: wrap;*!*/
+    /*!*max-width: 1100px;*!*/
+    /*margin: .5rem auto;*/
+    /*!*justify-content: center;*!*/
+
+/*}*/
+
+/*.product{*/
+    /*float: left;*/
+    /*min-width: 300px;*/
+    /*margin: .5rem;*/
+    /*text-align: center;*/
+
+/*}*/
+
+/*.content{*/
+    /*width: 300px;*/
+    /*height: 380px;*/
+    /*border: 2px solid green;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+
+.product_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+.product_list .product  {
+    flex: 1 0 400px;
+    box-sizing: border-box;
+    background: #e0ddd5;
+    color: #171e42;
+    padding: 20px;
+    height: 400px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+@media (min-width: 410px) {
+    .product_list .product  {
+        max-width: calc(50% - 20px);
+    }
+}
+@media (min-width: 620px) {
+    .product_list .product  {
+        max-width: calc(50% - 20px);
+    }
+}
+@media (min-width: 830px) {
+    .product_list .product  {
+        max-width: calc(50% - 20px);
+    }
+}
+@media (min-width: 1040px) {
+    .product_list .product  {
+        max-width: calc(50% - 20px);
+    }
+}
+@media (min-width: 1180px) {
+    .product_list .product  {
+        max-width: calc(50% - 20px);
+    }
+}
+@media (min-width: 1460px) {
+    .product_list .product  {
+        max-width: calc(33.33333% - 20px);
+    }
+}
+@media (min-width: 1670px) {
+    .product_list .product  {
+        max-width: calc(33.33333% - 20px);
+    }
+}

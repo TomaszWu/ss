@@ -85,13 +85,21 @@ header a:hover{
 
 /*}*/
 
-/*.content{*/
-    /*width: 300px;*/
-    /*height: 380px;*/
-    /*border: 2px solid green;*/
-    /*margin: 0 auto;*/
-/*}*/
+.content{
+    width: 90%;
+    height: 100%;
+    border: 2px solid green;
+    margin: 0 auto;
 
+
+    /*background-repeat: no-repeat;*/
+    /*!*background-attachment: fixed;*!*/
+    /*background-size: contain;*/
+}
+img{
+    height: 100%;
+    width: 100%;
+}
 
 .product_list {
     display: flex;
@@ -109,38 +117,70 @@ header a:hover{
     margin-left: 20px;
     margin-top: 20px;
 }
+@media (min-width: 100px) {
+    .product_list .product  {
+        max-width: calc(100% - 20px);
+    }
+    .product_list{
+        display:block;
+    }
+}
 @media (min-width: 410px) {
+    .product_list .product  {
+        max-width: calc(100% - 20px);
+    }
+    .product_list{
+        display:block;
+    }
+}
+@media (min-width: 750px) {
     .product_list .product  {
         max-width: calc(50% - 20px);
     }
-}
-@media (min-width: 620px) {
-    .product_list .product  {
-        max-width: calc(50% - 20px);
+    .product_list{
+        display: flex;
+        flex-direction: unset;
+        justify-content: center;
     }
 }
 @media (min-width: 830px) {
-    .product_list .product  {
+    .product_list .product {
         max-width: calc(50% - 20px);
+    }
+    .content{
+        width: 90%;
     }
 }
 @media (min-width: 1040px) {
     .product_list .product  {
         max-width: calc(50% - 20px);
     }
+    .product_list{
+        flex-direction: unset;
+        justify-content: unset;
+    }
 }
 @media (min-width: 1180px) {
     .product_list .product  {
-        max-width: calc(50% - 20px);
+        max-width: calc(33.33333% - 20px);
+    }
+    .product_list{
+        flex-direction: unset;
     }
 }
 @media (min-width: 1460px) {
     .product_list .product  {
         max-width: calc(33.33333% - 20px);
     }
+    .product_list{
+        flex-direction: unset;
+    }
 }
 @media (min-width: 1670px) {
     .product_list .product  {
         max-width: calc(33.33333% - 20px);
+    }
+    .product_list{
+        flex-direction: unset;
     }
 }

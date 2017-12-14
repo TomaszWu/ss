@@ -18,19 +18,41 @@ $(document).ready(function() {
         );
     })
 
-    // $('.product').mouseover(function() {
-    //     $(this).find('.product-title').css({
-    //         'filter': 'brightness(25%)',
-    //         'color': 'white',
-    //         'z-index': 22}
-    //     );
-    // })
-    // $('.product').mouseout(function() {
-    //     $(this).find('.product-title').css({
-    //         }
-    //     );
-    // })
+    $('.product .content a').mouseover(function() {
+        $(this).parent().parent().css({
+            'border': '1px solid black'}
+        );
+    })
+    $('.product .content a').mouseout(function() {
+        $(this).parent().parent().css({
+            'border': '1px solid white'}
+        );
+    })
 
-    console.log($('.product_list img '));
+
+    $.ajax({
+        url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=',
+        type: 'GET',
+        success: function(result) {
+            var footerLi = $('.content-instagram');
+            for(var i = 0; i < 6; i++){
+                var pictueToAdd = "<li><img src=" + result.data[i].images.low_resolution.url + "></li>";
+                footerLi.append(pictueToAdd);
+            }
+        }
+    });
+
+
+    $( window ).resize(function() {
+        var minHeight = 111111110;
+        var footerLi = $('.content-instagram li img');
+        for(var i = 0; i < footerLi.length; i++){
+            if(footerLi[i].clientHeight < minHeight){
+                minHeight = footerLi[i].clientHeight;
+            }
+
+        }
+        $('.content-instagram').css('height', minHeight);
+    });
 
 });

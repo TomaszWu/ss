@@ -18,4 +18,19 @@ $(document).ready(function() {
         );
     })
 
+    // $('.product').mouseover(function() {
+    //     $(this).find('.product-title').css({
+    //         'filter': 'brightness(25%)',
+    //         'color': 'white',
+    //         'z-index': 22}
+    //     );
+    // })
+    // $('.product').mouseout(function() {
+    //     $(this).find('.product-title').css({
+    //         }
+    //     );
+    // })
+
+    console.log($('.product_list img '));
+
 });

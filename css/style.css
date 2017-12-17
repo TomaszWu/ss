@@ -192,7 +192,7 @@ li:first-of-type a {
 .product{
     position: relative;
     overflow: hidden;
-    border: 1px solid white;
+    /*border: 1px solid black;*/
     /* Only the -webkit- prefix is required these days */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -250,6 +250,15 @@ li:first-of-type a {
     opacity: 1;
 }
 
+
+.mg-image:hover img {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
 .text-content{
     position: absolute;
     text-align: center;
@@ -258,7 +267,7 @@ li:first-of-type a {
 }
 
 
-img{
+.product-handler img{
     max-width: 100%;
     display: block; /*for the img inside your div */
     margin-left: auto;
@@ -269,18 +278,6 @@ img{
     transition: all 500ms;
 }
 
-.product-list .product .content a:hover img {
-    /*-webkit-transform: scale(1.4);*/
-    /*-moz-transform: scale(1.4);*/
-    /*transform: scale(1.4);*/
-}
-
-
-.product-list .product .content a:hover .handler img{
-    /*-webkit-transform: scale(1.4);*/
-    /*-moz-transform: scale(1.4);*/
-    /*transform: scale(1.4);*/
-}
 .push {
     height: 50px;
 }
@@ -289,6 +286,13 @@ img{
 
 
 /*footer*/
+
+h1{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: lowercase;
+    font-family: FreightSansPro,sans-serif;
+}
 
 .content-instagram{
     position: relative;
@@ -316,29 +320,96 @@ img{
 
 }
 
-.content-instagram li img{
-    display: inline;
+.content-instagram li div a, .instagram-post, .instagram-details{
+    height: 100%;
     width: 100%;
-    height:auto;
-    /*position:relative;*/
-    /*right:25%;*/
-    /*top:0px;*/
-    /*width:30%;*/
-    /*height:auto;*/
-    margin: 0;margin-left: 50%;
-    transform: translateX(-50%);
 }
 
-test1{
-    position: absolute;
-    width: 100%;
+.content-instagram li .instagram-post:hover .instagram-details {
+    opacity: 1;
+}
+
+.instagram-post{
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+
+}
+
+.content-instagram li div a{
     overflow: hidden;
 }
 
-img:hover{
-/*filter: brightness(75%);*/
-
+.content-instagram li div a img{
+    display: inline;
+    width: 100%;
+    height:auto;
+    margin: 0;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -o-transition: all 1s ease; /* IE 9 */
+    -ms-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
 }
+
+.content-instagram li .instagram-post:hover a img {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+
+.instagram-details {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    z-index: 100;
+    opacity: 0;
+    background: rgba(0,0,0,0.4);
+    display: table;
+    height: 101%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transition: all 500ms;
+}
+
+.instagram-details-handler {
+    display: table-cell;
+    font-size: 20px;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.instagram-details-handler svg {
+    padding-right: 10px;
+}
+
+.instagram-details-handler span:first-of-type {
+    padding-right: 20px;
+}
+
 @media (min-width: 100px) {
     .product-list .product  {
         max-width: calc(100% - 20px);

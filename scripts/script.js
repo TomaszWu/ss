@@ -18,20 +18,23 @@ $(document).ready(function() {
         );
     })
 
-    // $('.product .content a').mouseover(function() {
-    //     $(this).parent().parent().css({
-    //         'border': '1px solid black'}
-    //     );
-    // })
-    // $('.product .content a').mouseout(function() {
-    //     $(this).parent().parent().css({
-    //         'border': '1px solid white'}
-    //     );
-    // })
+
+
+
+
+    $('.hamburger-nav').click(function(){
+        $('body').toggleClass('nav_mobile_click').toggleClass('noScroll');
+        $('.hamburger-nav').toggleClass('hamburger-nav_clicked');
+    })
+
+
+
+
+
 
 
     $.ajax({
-        url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=',
+        url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=5785778428.ff093f1.f21e2fef7d5f4bef97e36303fb73a856',
         type: 'GET',
         success: function(result) {
             var footerLi = $('.content-instagram');
@@ -61,9 +64,6 @@ $(document).ready(function() {
             });
         }
     });
-
-
-
 
     $( window ).resize(function() {
         var maxHeight = resizeInstagramHeight();

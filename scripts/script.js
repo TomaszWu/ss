@@ -18,19 +18,21 @@ $(document).ready(function() {
         );
     })
 
-
-
-
+    // $('.make-it-fade').click(function () {
+    //     $('.darkness').toggleClass('active-fade');
+    // }
 
     $('.hamburger-nav').click(function(){
         $('body').toggleClass('nav_mobile_click').toggleClass('noScroll');
         $('.hamburger-nav').toggleClass('hamburger-nav_clicked');
+        $('.darkness').toggleClass('active-fade');
         // $('.test').toggleClass('test2');
     })
 
     $('.side_menu_cross div').click(function(){
         $('body').toggleClass('nav_mobile_click').toggleClass('noScroll');
         $('.hamburger-nav').toggleClass('hamburger-nav_clicked');
+        $('.darkness').toggleClass('active-fade');
         // $('.test').toggleClass('test2');
     })
 

@@ -1,4 +1,15 @@
-
+.active-fade {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9997;
+    background-color: rgba(0,0,0,.15);
+    -webkit-animation: fade .5s;
+    animation: fade .5s;
+}
 
 .up-list {
     display: none;
@@ -18,11 +29,11 @@ body {
 }
 
 .nav_mobile_click {
-    transform: translate3d(260px, 0, 0);
+    transform: translate3d(320px, 0, 0);
 }
 
 header .hamburger-nav{
-    /*transform: translate3d(260px, 0, 0);*/
+    /*transform: translate3d(320px, 0, 0);*/
     /*-webkit-transition: -webkit-transform .4s ease-in-out;*/
     /*transition: -webkit-transform .4s ease-in-out;*/
     /*transition: transform .4s ease-in-out;*/
@@ -80,7 +91,7 @@ header ul{
 }
 
 .header-content-right li h3 a{
-    padding-right: 0;
+    padding-right: 15px;
 }
 
 .header-content-right li a:hover{
@@ -96,13 +107,13 @@ header a{
     .side_menu {
         position: fixed;
         bottom: 0;
-        left: -260px;
+        left: -320px;
         overflow: hidden;
         padding: 0;
-        background-color: #fbf8f8;
+        background-color: white;
         overflow-x: hidden;
         overflow-y: hidden;
-        width: 260px;
+        width: 320px;
         z-index: 1;
         /*display: flex;*/
         /*justify-content: center;*/
@@ -119,7 +130,7 @@ header a{
         /*transition: transform .2s ease-in-out;*/
         /*transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;*/
         /*box-shadow: 5px 5px 10px 0 rgba(0,0,0,.3);*/
-        /*transform: translate3d(260px, 0, 0);*/
+        /*transform: translate3d(320px, 0, 0);*/
     }
 
     .side_menu_cross {
@@ -143,7 +154,7 @@ header a{
     }
 
     .test2 {
-        left: -260px;
+        left: -320px;
     }
 
     .nav-list-down {
@@ -259,9 +270,9 @@ header .logo div{
     min-height: 200px;
     width: 100%;
 
-    background-image: url('../images/siatka_logo.png');
+    background-image: url('../images/logo3.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
     background-position: center center;
 }
 
@@ -470,7 +481,7 @@ li:first-of-type a {
         list-style:none;
         padding: 0;
         margin: 0;
-        height: 260px;
+        height: 320px;
         overflow: hidden;
 
     }
@@ -618,7 +629,7 @@ li:first-of-type a {
 
     header .hamburger-nav, .test{
         display: none;
-        transform: translate3d(260px, 0, 0);
+        transform: translate3d(320px, 0, 0);
         -webkit-transition: -webkit-transform .4s ease-in-out;
         transition: -webkit-transform .4s ease-in-out;
         transition: transform .4s ease-in-out;
@@ -650,7 +661,7 @@ li:first-of-type a {
         /*position: fixed;*/
         /*top: 0;*/
         /*bottom: 0;*/
-        /*left: -260px;*/
+        /*left: -320px;*/
         /*overflow: hidden;*/
         /*height: 100vh;*/
         /*padding: 0;*/
@@ -661,9 +672,14 @@ li:first-of-type a {
         /*background-color: #fbf8f8;*/
         /*overflow-x: hidden;*/
         /*overflow-y: scroll;*/
-        /*width: 260px;*/
+        /*width: 320px;*/
         /*box-shadow: 5px 5px 10px 0 rgba(0,0,0,.3);*/
     }
+
+    .header-content-right li h3 a{
+        padding-right: 0;
+    }
+
 
     header ul.nav-list-down li:last-child,header ul.nav-list-down li:nth-last-child(2){
         display: none;

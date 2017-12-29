@@ -45,67 +45,71 @@ $(document).ready(function() {
         type: 'GET',
         success: function(result) {
             var footerLi = $('.content-instagram');
-            for(var i = 0; i < 6; i++){
-                var pictueToAdd =
-                    "<li>" +
-                    "<div class='instagram-post'>" +
-                        '<a href="' + result.data[i].link + '">' +
-                        "<img src=" + result.data[i].images.low_resolution.url + ">" +
-                        "<div class='instagram-details'>" +
-                            "<div class='instagram-details-handler'>" +
-                            "<i class=\"far fa-heart\"></i><span>" + result.data[i].likes.count + "</span>" +
-                            "<i class=\"far fa-comments\"></i><span>" + result.data[i].comments.count + "</span>" +
+            var j = 0;
+            for(var i = 0; i < result.data.length; i++){
+                if(result.data[i].images.low_resolution.height === 320 && j < 6){
+                    var pictueToAdd =
+                        "<li>" +
+                        "<div class='instagram-post'>" +
+                            "<img src=" + result.data[i].images.low_resolution.url + ">" +
+
+                            "<div class='instagram-details'>" +
+                                "<div class='instagram-details-handler'>" +
+                                "<i class=\"far fa-heart\"></i><span>" + result.data[i].likes.count + "</span>" +
+                                "<i class=\"far fa-comments\"></i><span>" + result.data[i].comments.count + "</span>" +
+                                "</div>" +
                             "</div>" +
+                            "<a href=" + result.data[i].link + "></a>" +
                         "</div>" +
-                        "</a>"
-                    "</div>" +
-                    "</li>";
-                footerLi.append(pictueToAdd);
+                        "</li>";
+                    footerLi.append(pictueToAdd);
+                    j = j + 1;
+                }
             }
 
             var maxHeight = resizeInstagramHeight();
             var footerLiImg = $('.content-instagram li div img');
 
-            $.when(footerLiImg.length === 6).then(function(){
-                centerInstaragramPhotos(maxHeight);
-            });
+            // $.when(footerLiImg.length === 6).then(function(){
+            //     centerInstaragramPhotos(maxHeight);
+            // });
         }
     });
 
-    $( window ).resize(function() {
-        var maxHeight = resizeInstagramHeight();
-        centerInstaragramPhotos(maxHeight);
-
-
-    });
-
-    function resizeInstagramHeight(){
-        var maxHeight = Number.MAX_SAFE_INTEGER;
-        var footerLiImg = $('.content-instagram li div img');
-
-        for(var i = 0; i < footerLiImg.length; i++){
-            if(footerLiImg[i].clientHeight < maxHeight){
-                maxHeight = footerLiImg[i].clientHeight;
-            }
-        }
-        $('.content-instagram').css('height', maxHeight);
-
-        return maxHeight;
-    }
-
-    function centerInstaragramPhotos(maxHeight){
-        var footerLiImg = $('.content-instagram li div img');
-
-        for(var i = 0; i < footerLiImg.length; i++){
-            if(footerLiImg[i].clientHeight !== maxHeight){
-                var heightToResize = (footerLiImg[i].clientHeight - maxHeight) / 2;
-                $(footerLiImg[i]).css({
-                    'transform': 'translateY(-' + heightToResize + 'px)',
-                    'top': heightToResize
-                });
-            }
-        }
-    }
+    // $( window ).resize(function() {
+    //     var maxHeight = resizeInstagramHeight();
+    //     centerInstaragramPhotos(maxHeight);
+    //
+    //
+    // });
+    //
+    // function resizeInstagramHeight(){
+    //     var maxHeight = Number.MAX_SAFE_INTEGER;
+    //     var footerLiImg = $('.content-instagram li div img');
+    //
+    //     for(var i = 0; i < footerLiImg.length; i++){
+    //         if(footerLiImg[i].clientHeight < maxHeight){
+    //             maxHeight = footerLiImg[i].clientHeight;
+    //         }
+    //     }
+    //     $('.content-instagram').css('height', maxHeight * 2);
+    //
+    //     return maxHeight;
+    // }
+    //
+    // function centerInstaragramPhotos(maxHeight){
+    //     var footerLiImg = $('.content-instagram li div img');
+    //
+    //     for(var i = 0; i < footerLiImg.length; i++){
+    //         if(footerLiImg[i].clientHeight !== maxHeight){
+    //             var heightToResize = (footerLiImg[i].clientHeight - maxHeight) / 2;
+    //             $(footerLiImg[i]).css({
+    //                 'transform': 'translateY(-' + heightToResize + 'px)',
+    //                 'top': heightToResize,
+    //             });
+    //         }
+    //     }
+    // }
 
 
 

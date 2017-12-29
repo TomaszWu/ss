@@ -1,3 +1,189 @@
+.footer {
+    margin-top: 40px;
+    background-color: black;
+}
+
+h1{
+
+    text-align: left;
+    background-color: white;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: lowercase;
+    font-family: FreightSansPro,sans-serif;
+    padding-top: 3rem;
+    padding-left: 10px;
+}
+
+.footer-instagram {
+    overflow: hidden;
+}
+
+.footer-instagram-handler {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.content-instagram {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.content-instagram li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+    padding: 0;
+    margin: 0;
+
+}
+
+.instagram-post{
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: rgba(255,255,255,.85);
+    overflow: hidden;
+}
+
+.instagram-post img {
+    width: 100%;
+    height:auto;
+    margin: 0;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -o-transition: all 1s ease; /* IE 9 */
+    -ms-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    max-width: 100%;
+    -webkit-transition: .2s ease all;
+    transition: .2s ease all;
+}
+
+.instagram-details-handler {
+    display: table-cell;
+    font-size: 20px;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.instagram-details-handler svg {
+    padding-right: 10px;
+}
+
+.instagram-details-handler span:first-of-type {
+    padding-right: 20px;
+}
+
+.content-instagram li .instagram-post:hover a img {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+
+.instagram-details {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    opacity: 0;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 2rem;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transition: all 500ms;
+
+}
+
+.footer-down {
+    padding-top: 25px;
+    width: 65%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.footer-down a {
+    float: right;
+}
+
+
+.footer-down h4 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: left;
+    color: wheat;
+    font-weight: 400;
+}
+
+
+
+
+.content-instagram li div a {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transition: all 500ms;
+}
+
+.content-instagram li .instagram-post:hover .instagram-details {
+    opacity: 1;
+}
+
 .active-fade {
     display: block;
     position: fixed;
@@ -74,7 +260,8 @@ header ul{
     text-align:center;
 }
 
-.header-content-right li a{
+.header-content-right li a, .footer-down a{
+    text-decoration: none;
     font-family: FreightSansPro,sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -86,7 +273,7 @@ header ul{
     transition: color 0.5s;
 }
 
-.header-content-right li a{
+.header-content-right li a, .footer-down a{
     padding-right: 20px;
 }
 
@@ -153,10 +340,6 @@ header a{
         background-position: center center;
     }
 
-    .test2 {
-        left: -320px;
-    }
-
     .nav-list-down {
         -webkit-flex-direction: column;
         flex-direction: column;
@@ -179,6 +362,53 @@ header a{
 
     header ul.nav-list-down li:last-child a, header ul.nav-list-down li:nth-last-child(2) a{
         color: #a0a0a0;
+    }
+
+    .nav-list-down li:not(:last-of-type) {
+        border-bottom: 1px solid rgba(0,0,0,0.10);
+    }
+
+
+    .product-handler img{
+        width: 280px;
+        height: 380px;
+        overflow: hidden;
+    }
+
+    .product-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-title p {
+        font-family: FreightSansPro,sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: -0.2px;
+        text-transform: none;
+        color: #a0a0a0;
+    }
+    .product{
+        padding: 15px 0 15px;
+    }
+
+    .content a {
+        text-decoration: none;
+    }
+
+    .content-instagram li {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .footer-down {
+        width: 95%;
     }
 
 }
@@ -267,7 +497,7 @@ header div a{
 }
 
 header .logo div{
-    min-height: 200px;
+    min-height: 100px;
     width: 100%;
 
     background-image: url('../images/logo3.png');
@@ -281,6 +511,12 @@ header .headline{
     font-size: 80px;
     font-family: Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
 }
+
+.nav-list-down {
+    margin: 0 20px 0 20px;
+}
+
+
 
 .nav-list-down > li > a {
     font-family: Montserrat, Helvetica, Arial, sans-serif;
@@ -313,7 +549,8 @@ li:first-of-type a {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content: center;
     /*height: 40px;*/
 }
 
@@ -324,7 +561,7 @@ li:first-of-type a {
 
 
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
 
     .product{
         box-shadow: 5px 5px 10px 0 rgba(0,0,0,.3);
@@ -464,136 +701,6 @@ li:first-of-type a {
 
     /*footer*/
 
-    h1{
-        font-size: 30px;
-        font-weight: 500;
-        text-transform: lowercase;
-        font-family: FreightSansPro,sans-serif;
-    }
-
-    .content-instagram{
-        position: relative;
-        display: flex;
-        /*flex-direction: row;*/
-        flex-wrap: wrap;
-        /*justify-content: flex-start;*/
-        /*height: 280px;*/
-        list-style:none;
-        padding: 0;
-        margin: 0;
-        height: 320px;
-        overflow: hidden;
-
-    }
-
-    .content-instagram li{
-        /*height: auto;*/
-        /*display: list-item;*/
-        /*text-align: -webkit-match-parent;*/
-        webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-        flex: 0 0 16.6666666667%;
-        max-width: 16.6666666667%;
-
-    }
-
-    .content-instagram li div a, .instagram-post, .instagram-details{
-        height: 100%;
-        width: 100%;
-    }
-
-    .content-instagram li .instagram-post:hover .instagram-details {
-        opacity: 1;
-    }
-
-    .instagram-post{
-        position: relative;
-        background-size: cover;
-        background-position: center center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-
-
-    }
-
-    .content-instagram li div a{
-        overflow: hidden;
-    }
-
-    .content-instagram li div a img{
-        display: inline;
-        width: 100%;
-        height:auto;
-        margin: 0;
-        -webkit-transition: all 1s ease; /* Safari and Chrome */
-        -moz-transition: all 1s ease; /* Firefox */
-        -o-transition: all 1s ease; /* IE 9 */
-        -ms-transition: all 1s ease; /* Opera */
-        transition: all 1s ease;
-    }
-
-    .content-instagram li .instagram-post:hover a img {
-        -webkit-transform:scale(1.25); /* Safari and Chrome */
-        -moz-transform:scale(1.25); /* Firefox */
-        -ms-transform:scale(1.25); /* IE 9 */
-        -o-transform:scale(1.25); /* Opera */
-        transform:scale(1.25);
-    }
-
-
-    .instagram-details {
-        position: absolute;
-        color: white;
-        font-size: 15px;
-        z-index: 100;
-        opacity: 0;
-        background: rgba(0,0,0,0.4);
-        display: table;
-        height: 101%;
-        width: 100%;
-        left: 0;
-        right: 0;
-        top: 0;
-        -webkit-transition: all 500ms;
-        -moz-transition: all 500ms;
-        transition: all 500ms;
-    }
-
-    .instagram-details-handler {
-        display: table-cell;
-        font-size: 20px;
-        position: relative;
-        width: 100%;
-        vertical-align: middle;
-        text-align: center;
-    }
-
-    .instagram-details-handler svg {
-        padding-right: 10px;
-    }
-
-    .instagram-details-handler span:first-of-type {
-        padding-right: 20px;
-    }
-
-    .footer-closing{
-        height: 85px;
-        background-color: black;
-    }
-    .up-list div:nth-child(3){
-        display: none;
-    }
 
 
 }
@@ -612,9 +719,9 @@ li:first-of-type a {
         max-width: calc(100% - 20px);
     }
 }
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 750px) {
     .product-list .product  {
-        max-width: calc(100% - 20px);
+        max-width: 380px;
     }
 
 }

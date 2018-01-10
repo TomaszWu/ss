@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="scripts/script.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script defer src="scripts/fontawesome-all.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+
+
 </head>
-<body>
+<body class="disable-on-mobile">
 <div class="darkness"></div>
 <header>
     <div class="container">
@@ -41,8 +45,8 @@
         </nav>
     </div>
     <!--<section class="logo">-->
-        <!--<div class="container">-->
-        <!--</div>-->
+    <!--<div class="container">-->
+    <!--</div>-->
     <!--</section>-->
     <div class="menu_keeper menu_keeper_down side_menu side_menu_content">
         <ul class="nav-list-down">
@@ -65,19 +69,104 @@
 
 </header>
 
-    <div class="grid">
+    <div class="product-container">
         <div class="grid-handler">
-            <img
-            class="product-image"
-            src="images/siatka_grecka_size.jpg"
-            alt="Arc de Triomphe"
-            >
+            <div class="thumbnails-photos">
+                <ul>
+                    <li class="thumbnails-photo-single"><img src="./images/siatka_small40x60.jpeg"></li>
+                    <li class="thumbnails-photo-single"><img src="./images/kopenhagen_small.jpg"></li>
+                </ul>
 
+            </div>
+            <div class="handler-image desktop displayNo">
+                <ul class="">
+                    <li class="">
+                        <img
+                                class="product-image-desktop active test"
+                                src="images/szynka_small.jpg"
+                                alt="Arc de Triomphe"
+                        >
+                    </li>
+                    <li class="">
+                        <img
+                                class="product-image-desktop test"
+                                src="images/kopenhagen_small2.jpg"
+                                alt="Arc de Triomphe"
+                        >
+                    </li>
+
+                </ul>
+                <!--<div class="swiper-button-next"></div>-->
+                <!--<div class="swiper-button-prev"></div>-->
+            </div>
+            <div class="handler-image swiper-container mobile displayNo">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img
+                                class="product-image-mobile active test"
+                                src="images/szynka_small.jpg"
+                                alt="Arc de Triomphe"
+                        >
+                    </li>
+                    <li class="swiper-slide">
+                        <img
+                                class="product-image-mobile test"
+                                src="images/kopenhagen_small2.jpg"
+                                alt="Arc de Triomphe"
+                        >
+                    </li>
+
+                </ul>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="product-content ">
+                <div>
+                    <h1>SIATKA SZARA</h1>
+                    <p>Teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt
+                        teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt
+                        teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt
+                        teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt teskt </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="handler-carousel displayNo">
+        <div class="carousel-close">
+            <i class="far fa-times-circle fa-3x"></i>
+        </div>
+        <div class="container-carousel">
+            <ul class="carousel">
+                <li class=" ">
+                    <img
+                            class="product-image-full-screen displayNo"
+                            src="images/szynka_small.jpg"
+                            alt="Arc de Triomphe"
+                    >
+                </li>
+                <li class=" ">
+                    <img
+                            class="product-image-full-screen displayNo"
+                            src="images/kopenhagen-full-screen.jpg"
+                            alt="Arc de Triomphe"
+                    >
+                </li>
+                <li class="arrow-left">
+                    <div>
+                        <i class="fas fa-angle-left fa-5x"></i>
+                    </div>
+                </li>
+                <li class="arrow-rigth">
+                    <div>
+                        <i class="fas fa-angle-right fa-5x"></i>
+                    </div>
+                </li>
+            </ul>
 
         </div>
 
     </div>
-
 <section>
     <div>
         <ul class="handler breadcrumbs-container">
@@ -112,9 +201,11 @@
     </div>
     <!--<div class="footer-closing"></div>-->
 </footer>
+<script src="dist/js/swiper.min.js"></script>
 
+<!-- Initialize Swiper -->
+<script>
 
-
-
+</script>
 </body>
 </html>

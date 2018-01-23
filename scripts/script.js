@@ -22,6 +22,8 @@ document.onreadystatechange = () => {
 
                 $('.desktop').removeClass('displayNo');
                 $('.mobile').addClass('displayNo');
+                $('.swiper-container-down').addClass('displayNo');
+                $('.swiper-container-down-tight').addClass('displayNo');
 
                 $('.product-image-desktop ')
                     .mousemove(function(e) {
@@ -69,23 +71,32 @@ document.onreadystatechange = () => {
                             $('body').toggleClass('noScroll');
                         }
 
-
+                        return true;
 
                     })
 
-            } else {
+            } else if(window.matchMedia('(min-width: 500px)').matches && window.matchMedia('(max-width: 999px)').matches) {
 
-                $('.desktop').addClass('displayNo');
-                $('.mobile').removeClass('displayNo');
+                $('.swiper-container-down-tight').removeClass('displayNo');
+                $('.swiper-container-down').addClass('displayNo');
+
+
+            } else {
+                $('.swiper-container-down-tight').addClass('displayNo');
+                $('.swiper-container-down').removeClass('displayNo');
 
             }
+
+            $('.desktop').addClass('displayNo');
+            $('.mobile').removeClass('displayNo');
 
         }
 
 
-        var swiper = new Swiper('.swiper-container', {
+        var swiper = new Swiper('.swiper-container-up', {
             slidesPerView: 1,
             spaceBetween: 30,
+            lazy: true,
             loop: true,
             pagination: {
                 el: '.swiper-pagination',
@@ -98,6 +109,26 @@ document.onreadystatechange = () => {
 
         });
 
+        var swiper2 = new Swiper('.swiper-container-down', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            lazy: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+        });
+
+        var swiper3 = new Swiper('.swiper-container-down-tight', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            lazy: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
 
 
             $('.up_list_element').mouseover(function() {

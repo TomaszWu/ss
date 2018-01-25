@@ -23,7 +23,7 @@ document.onreadystatechange = () => {
                 $('.desktop').removeClass('displayNo');
                 $('.mobile').addClass('displayNo');
                 $('.swiper-container-down').addClass('displayNo');
-                $('.swiper-container-down-tight').addClass('displayNo');
+                $('.swiper-container-down-tablet').addClass('displayNo');
                 $('.swiper-button-next').addClass('displayNo');
                 $('.swiper-button-prev').addClass('displayNo');
 
@@ -302,7 +302,7 @@ document.onreadystatechange = () => {
         ;
 
             $.ajax({
-                url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=',
+                url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=5785778428.ff093f1.f21e2fef7d5f4bef97e36303fb73a856',
                 type: 'GET',
                 success: function(result) {
                     var footerLi = $('.content-instagram');

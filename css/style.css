@@ -534,12 +534,18 @@ h1{
         left: 50%;
         transform: translate(-50%, -50%);
         top: 50%;
-        font-size: 40px;
+
+
         /*border-bottom: 2px solid black;*/
 
         /*text-decoration: underline;*/
         /*text-decoration-color: #707070;*/
         /*z-index: 99;*/
+    }
+    .logo-product-page-mobile img{
+        transform: scale(0.3, 0.3);
+        -ms-transform: scale(0.3, 0.3);
+        -webkit-transform: scale(0.3, 0.3);
     }
 
 }

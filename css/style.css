@@ -1,3 +1,5 @@
+/*////////////////////////////// GENERAL ////////////////////////////////////////*/
+
 body {
     margin: 0;
     padding: 0;
@@ -55,6 +57,7 @@ header ul{
     justify-content: center;
     padding: 3px 17px 3px;
     text-align:center;
+    padding-left: 0;
 }
 .header-content-right li a, .footer-down a{
     text-decoration: none;
@@ -177,7 +180,6 @@ li:first-of-type a {
 }
 .handler{
     max-width: 1170px;
-    width: 100%;
     margin: 0 auto;
     display: flex;
     -webkit-box-align: center;
@@ -373,6 +375,12 @@ h1{
 .up-list {
     display: none;
 }
+
+.carousel-product-name{
+    writing-mode: vertical-rl;
+    margin-left: 0;
+}
+
 @media screen and (max-width: 1000px) {
     header .logo div{
         min-height: 100px;
@@ -427,6 +435,14 @@ h1{
         background-position: center center;
     }
 }
+
+
+
+
+/*////////////////////////////// GENERAL ////////////  KONIEC   ////////////////////////////*/
+
+
+
 @media screen and (max-width: 749px) {
     .nav-list-down {
         -webkit-flex-direction: column;
@@ -442,7 +458,7 @@ h1{
         -webkit-align-items: flex-start;
         align-items: flex-start;
     }
-    .header-content-right li:nth-of-type(-n + 2){
+    .logo-product-page{
         display: none;
     }
     header ul.nav-list-down li:last-child a, header ul.nav-list-down li:nth-last-child(2) a{
@@ -454,9 +470,17 @@ h1{
     .product-image-main{
         padding-bottom: 8px;
     }
-    .product-handler img{
+    .product-handler {
         width: 280px;
         height: 380px;
+        overflow: hidden;
+    }
+
+    .product-handler img{
+
+
+        width: 100%;
+        height: 100%;
         overflow: hidden;
     }
     .product-title {
@@ -504,6 +528,20 @@ h1{
     .footer-down {
         width: 95%;
     }
+
+    .logo-product-page-mobile{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        font-size: 40px;
+        /*border-bottom: 2px solid black;*/
+
+        /*text-decoration: underline;*/
+        /*text-decoration-color: #707070;*/
+        /*z-index: 99;*/
+    }
+
 }
 @media screen and (min-width: 1000px) {
     header .logo div{
@@ -570,7 +608,7 @@ h1{
     .product-handler{
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        /*overflow: hidden;*/
     }
     .product-title{
         position: absolute;
@@ -627,6 +665,10 @@ h1{
     }
     .push {
         height: 50px;
+    }
+
+    .logo-product-page-mobile{
+        display: none;
     }
 }
 @media screen and (min-width: 100px) {
@@ -745,7 +787,13 @@ h1{
     flex-direction: row;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding-left: 10px;
+    max-width: 1170px;
+    padding-left: 15px;
+    /*width: 100%;*/
+    /*display: block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*padding-left: 10px;*/
 }
 .breadcrumb-divider{
     box-sizing:border-box;
@@ -881,8 +929,15 @@ h1{
         width: 90%;
     }
     .product-content div p{
-        /*text-align: center;*/
+        font-size: 14px;
+        line-height: 23px;
+        margin-bottom: 23px;
+        text-align: justify;
+        word-break: break-word;
+        text-indent: 50px;
     }
+
+
     /*html, body {*/
     /*position: relative;*/
     /*height: 100%;*/
@@ -922,10 +977,14 @@ h1{
         /*margin-right: 30px;*/
         /*margin-left: 30px;*/
         min-width: 280px;
+        display: flex;
+        flex-direction: row;
     }
 
     .product-handler-slider-mobile-down-tight{
         min-width: 280px;
+        display: flex;
+        flex-direction: row;
     }
 }
 @media screen and (min-width: 1000px) {
@@ -989,19 +1048,12 @@ h1{
     .grid-handler div.product-content div {
         margin: 1em;
     }
-    .grid-handler div.product-content div h1 {
-        background-color: #eee;
-        font-family: FreightSansPro, sans-serif;
-        text-transform: uppercase;
-        font-size: 16px;
-        line-height: 16px;
-        letter-spacing: .68em;
-        color: #111;
-    }
     .grid-handler div.product-content div p {
         font-family: FreightSansPro, sans-serif;
         font-size: 14px;
         line-height: 1.5;
+
+
     }
     .thumbnails-photo-single {
         width: 80px;
@@ -1104,6 +1156,19 @@ h1{
     }
 }
 /*////////////////////////////////////////////////////////////*/
+
+
+
+.grid-handler div.product-content div h2 {
+    background-color: #eee;
+    font-family: FreightSansPro, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: .50em;
+    color: #111;
+}
+
 
 /*.swiper-container-down {*/
     /*width: 100%;*/

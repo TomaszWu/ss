@@ -660,14 +660,15 @@ h1{
         width: 100%;
     }
     .product-handler img{
-        max-width: 100%;
-        display: block; /*for the img inside your div */
-        margin-left: auto;
-        margin-right: auto;
-        height: 100%;
-        -webkit-transition: all 500ms;
-        -moz-transition: all 500ms;
-        transition: all 500ms;
+        /*max-width: 100%;*/
+        /*display: block; !*for the img inside your div *!*/
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        /*height: 100%;*/
+        /*-webkit-transition: all 500ms;*/
+        /*-moz-transition: all 500ms;*/
+        /*transition: all 500ms;*/
+
     }
     .push {
         height: 50px;
@@ -1011,7 +1012,7 @@ h1{
     }
     .grid-handler .handler-image img {
         /*width: 100%;*/
-        display: none;
+        /*display: none;*/
     }
     .active {
         width: 100%;

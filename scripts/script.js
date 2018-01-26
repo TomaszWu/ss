@@ -102,7 +102,7 @@ document.onreadystatechange = () => {
 
         var swiper = new Swiper('.swiper-container-up', {
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: 60,
             lazy: true,
             loop: true,
             pagination: {
